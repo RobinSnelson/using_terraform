@@ -359,3 +359,6 @@ Files/
 *.tfplan
 *.backup
 *.tfstate
+
+#folders
+.vscode/
