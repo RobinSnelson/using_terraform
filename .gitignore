@@ -359,6 +359,8 @@ Files/
 *.tfplan
 *.backup
 *.tfstate
+terraform.tfvars
+
 
 #folders
 .vscode/
