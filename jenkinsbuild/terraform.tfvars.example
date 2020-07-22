@@ -1,0 +1,5 @@
+public_key            = "your public key string" # Public key string
+project_name          = "jenkins"  # A project Name 
+location              = "westeurope" # Preferred Location
+vnet_address_space    = "10.0.0.0/22" # Suitable Address Space
+subnet_address_prefix = "10.0.1.0/24" # Suitable Address Space

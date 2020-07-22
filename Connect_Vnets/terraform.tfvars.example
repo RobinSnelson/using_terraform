@@ -1,0 +1,4 @@
+default_location = "preferred location"
+project_name     = "dev"
+main_environment = "infra"
+web_environment  = "web"

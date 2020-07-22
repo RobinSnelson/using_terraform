@@ -360,6 +360,8 @@ Files/
 *.backup
 *.tfstate
 terraform.tfvars
+*.tfvars
+
 
 
 #folders
