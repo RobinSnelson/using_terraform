@@ -9,6 +9,6 @@ This project builds two Vnets one named Infra and one named web, adds a subnet i
 
 ### Create_Jenkins_Server
 
-I followed along with labs created by Michael Levan on the Cloud skills Devops course, he created a jenkins server and then ran the install code. Ive just combined it all under one roof here, I did for the exercise. You will have to stage the "installjenkins.sh" in a public repo, you can use it from where it is, but I wont check it works all the time unless I have to use it or update it later. All the code for the install comes from Michael, plus mst of te terraform
+I followed along with labs created by Michael Levan on the Cloud skills Devops course, he created a jenkins server and then ran the install code. Ive just combined it all under one roof here, I did for the exercise. You will have to stage the "installjenkins.sh" in a public repo, you can use it from where it is, but I wont check it works all the time unless I have to use it or update it later. All the code for the install comes from Michael, plus most of the terraform code too
 
 Michaels labs are great, very informative, hes just started a podcast called Head In the Clouds that promises to be good. https://open.spotify.com/show/3Ffj8BXSOLljLL4vF4fkNC
