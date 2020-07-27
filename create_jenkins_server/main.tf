@@ -5,6 +5,12 @@ provider "azurerm" {
 resource "azurerm_resource_group" "jenkins_rg" {
   name     = "${var.project_name}-rg"
   location = var.location
+
+  tags = {
+    "Environment" = "Jenkins"
+    "Type"        = "Resource Group"
+    "Purpose"     = "Study"
+  }
 }
 
 resource "azurerm_virtual_network" "jenkins_vnet" {
@@ -14,6 +20,12 @@ resource "azurerm_virtual_network" "jenkins_vnet" {
   address_space = [
     "${var.vnet_address_space}"
   ]
+
+  tags = {
+    "Environment" = "Jenkins"
+    "Type"        = "Virtual Network"
+    "Purpose"     = "Study"
+  }
 
 }
 
@@ -33,6 +45,12 @@ resource "azurerm_public_ip" "jenkinsServerPublicIP" {
   location            = var.location
   resource_group_name = azurerm_resource_group.jenkins_rg.name
   allocation_method   = "Static"
+
+  tags = {
+    "Environment" = "Jenkins"
+    "Type"        = "Public IP"
+    "Purpose"     = "Study"
+  }
 }
 
 resource "azurerm_network_interface" "jenkinsServerNIC_ID" {
@@ -45,6 +63,12 @@ resource "azurerm_network_interface" "jenkinsServerNIC_ID" {
     subnet_id                     = azurerm_subnet.jenkins_subnet.id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.jenkinsServerPublicIP.id
+  }
+
+  tags = {
+    "Environment" = "Jenkins"
+    "Type"        = "Network Interface"
+    "Purpose"     = "Study"
   }
 }
 resource "azurerm_linux_virtual_machine" "jenkinsServerVM" {
@@ -79,7 +103,9 @@ resource "azurerm_linux_virtual_machine" "jenkinsServerVM" {
   }
 
   tags = {
-    environment = "staging"
+    "Environment" = "Jenkins"
+    "Type"        = "Virtual Machine"
+    "Purpose"     = "Study"
   }
 }
 
@@ -96,6 +122,12 @@ resource "azurerm_virtual_machine_extension" "jenkins_extension" {
       "commandToExecute" : "bash installjenkins.sh"
   }
   SETTINGS
+
+  tags = {
+    "Environment" = "Jenkins"
+    "Type"        = "Extension"
+    "Purpose"     = "Study"
+  }
 }
 
 output "ServerIP" {
